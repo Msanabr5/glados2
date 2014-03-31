@@ -12,4 +12,3 @@ class Agreement < ActiveRecord::Base
   validates :author, :presence => { :message => "Please enter an author"}
   validates_inclusion_of :author, :in => ALL_AUTHOR_TYPES, :message => "Not the correct author type"
 end
-

@@ -1,7 +1,7 @@
 class AgreementsController < ApplicationController
 
   def index
-    @agreements = Agreement.paginate :page=>params[:page], :order => 'name desc', :per_page => 10 
+    @agreement = Agreement.paginate :page=>params[:page], :order => 'name desc', :per_page => 10
   end
 
   def show
