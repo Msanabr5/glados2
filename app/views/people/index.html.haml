@@ -27,7 +27,7 @@
         %ul.door_keys
           - person.door_keys.each do |door_key|
             %li= link_to door_key.id, door_key_path(door_key.id)
-    .span1= link_to "Edit", edit_person_path(person.id)
-    .span1= link_to "Delete", person_path(person.id)
+    .span1= link_to 'Edit', edit_person_path(person.id)
+    .span1= link_to 'Delete', person_path(person.id), {:confirm => "Are you sure", :method => :delete }
 
 .digg_pagination= will_paginate @people, {:container => false}

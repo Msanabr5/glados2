@@ -1,5 +1,5 @@
 class Person <ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :name, :first_name, :last_name
 
   has_many :possession_contracts
   has_many :equipment, through: :possession_contracts
@@ -8,7 +8,10 @@ class Person <ActiveRecord::Base
   has_many :fobs
   has_many :agreement_executions
   has_many :agreements, through: :agreement_executions
-  validates :name, :presence => true
+  validates :first_name, :last_name, :presence => true
 
+  def name
+    "#{self.first_name} #{self.last_name}"
+  end
 end
 
