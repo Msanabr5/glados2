@@ -1,7 +1,9 @@
 
 #Create people
-person_list = [ "Matthew Sanabria", "Scott Conley", "Michael Zeno" ]
-people = person_list.map {|person| Person.create(name: person)}
+people = []
+people[0] = Person.create(name: "Matthew Sanabria", first_name: "Matthew", last_name: "Sanabria")
+people[1] = Person.create(name: "Scott Conley", first_name: "Scott", last_name: "Conley")
+people[2] = Person.create(name: "Mike Zeno", first_name: "Mike", last_name: "Zeno")
 
 #Create fobs
 fob_list = [ "1234567890A", "1234567890B", "1234567890C" ]
