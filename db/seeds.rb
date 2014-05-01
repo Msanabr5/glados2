@@ -1,4 +1,3 @@
-
 #Create people
 people = []
 people[0] = Person.create(name: "Matthew Sanabria", first_name: "Matthew", last_name: "Sanabria")
